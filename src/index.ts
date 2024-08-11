@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
-import { Request, Response } from 'express'
+import { Request, Response } from 'express';
 
 // send a test GET request to:
 //  -) read all the objects that are stored in my temp db
