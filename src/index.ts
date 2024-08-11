@@ -1,14 +1,15 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import "dotenv/config";
-import mongoose from 'mongoose';
+import 'dotenv/config';
+import { Request, Response } from 'express';
 
-mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
+// send a test GET request to:
+//  -) read all the objects that are stored in my temp db
 
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-app.use(cors());
+const be_server = express();
+be_server.use(express.json());
+be_server.use(express.urlencoded({extended: true}));
+be_server.use(cors());
 
 app.get("/api/test", async (req: Request, res: Response) => {
     res.json({message: "hello from an express appi endpoint"});
