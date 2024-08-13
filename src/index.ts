@@ -14,6 +14,6 @@ be_server.use(cors());
 
 be_server.use("/courses", universityCourseRouter);
 
-app.listen(7000, () => {
+be_server.listen(7000, () => {
     console.log("server running on localhost:7000");
 });
