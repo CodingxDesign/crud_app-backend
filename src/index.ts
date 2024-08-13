@@ -2,6 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import universityCourseRouter from './routes/universityCourseRoutes'
+import mongoose from 'mongoose';
+
+const innovationHubMongoCluster = process.env.MONGODB_CONNECTION_STRING as string;
+mongoose.connect(`${innovationHubMongoCluster}`+"/checo");
 
 const be_server = express();
 be_server.use(express.json());
