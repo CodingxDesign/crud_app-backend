@@ -1,9 +1,11 @@
 export type UniversityCourseType = {
     CourseID: number;
     CourseName: string;
-    CareerID: number;
+    College: number;
+    Department: string;
     Year: number;
     Semester: number;
-    Optative: boolean;
-    CourseCode: string;
+    CourseCode: number;
+    Instructor: string;
+    StudentIDs: Array<Number>;
 };
