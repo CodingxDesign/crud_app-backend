@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import UniversityCourse from '../models/universityClass';
+import UniversityCourse from '../models/universityCourse';
 import mongoose from 'mongoose';
 
 const router = express.Router();
